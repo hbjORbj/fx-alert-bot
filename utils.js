@@ -1,7 +1,7 @@
 exports.validateInput = (text) => {
-  if (text.length < 6) return false;
-  const pair = text.slice(0, 3) + "_" + text.slice(3);
-  return fxPairs.includes(pair);
+  if (text.length < 8) return false;
+  const pair = text.slice(0, 3) + "_" + text.slice(3, 6);
+  return fxPairs.includes(pair.toUpperCase());
 };
 
 const fxPairs = [
